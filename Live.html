@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>GamePlay - LIVE</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src= "http://player.twitch.tv/js/embed/v1.js"></script>
+      <script type="text/javascript">
+         function getIdFromUser() {
+         	var id = document.getElementById("IdInput").value;
+         	return id;
+         }
+         
+         function videoplayer() {
+         	var channelId = getIdFromUser()
+         	var options = {
+         		width: 800,
+         		height: 600,
+         		channel: channelId,
+         	};
+         	var player = new Twitch.Player("{PLAYER_DIV_ID}", options);
+         }
+         
+         function getRandomIdFromUser()
+         {
+         	var gameArray = ["Ninja", "TimTheTatMan", "Shroud", "DrDisRespect", "Tfue", "summit1g", "dakotaz", "drlupo", "nickmercs", "imaqtpie", "lirik", "sodapoppin", "nightblue3", "loltyler1", "sypherpk", "tsm_hamlinz", "faker", "couragejd", "cizzorz", "gosu", "boxbox", "overwatchleague", "highdistortion", "dyrus", "tsm_bjergson", "c9sneaky", "cloakzy", "trick2g", "doublelift", "nl_kripp", "voyboy", "symfuhny", "pashabiceps", "aydan", "nadeshot", "riotgames", "reckful", "trumpsc", "s1mple", "monstercat", "liquidchap", "moonmoon_ow", "aphromoo", "asmongold", "aimbotcalvin", "tarik", "jasonr", "macie_jay", "annemunition", "n0thing", "pengu", "dafran"]
+         	var random = gameArray[Math.floor(Math.random() * gameArray.length)];
+         	return random;
+         }
+         
+         function randomvideoplayer() {
+         	var channelId = getRandomIdFromUser()
+         	var options = {
+         		width: 800,
+         		height: 600,
+         		channel: channelId,
+         	};
+         	var player = new Twitch.Player("{PLAYER_DIV_ID}", options);
+         }
+         
+      </script>
+   </head>
+   <body style="background-color:#171a21;">
+      <div class="topnav" style="display:flex;justify-content:center;align-items:center;">
+         <div class="logo"><a href="index.html"><img src="Updated_logo.png" alt="GamePlay_Logo" height="75" width="196"></a></div>
+         <a href="News.html">Gaming News</a>
+         <a href="Live.html">GamePlay Live</a>
+         <a href="GamePurchases.html">Esports and Purchasing</a>
+         <a href="Contact.html">Contact Us</a>
+      </div>
+      <br>
+      </br>
+      <br>
+      </br>
+      <div style="color:white;text-align: right;">
+      
+      <h1>
+         <p style="color:white;text-align: center;">Welcome to GamePlay <i>LIVE</i><br>Your home for Live entertainment!</p>
+      </h1>
+      <p style="color:white;text-align: center;">Enter any <b><u>Twitch Streamer's</u></b> username into the box below. You can watch multiple streams at the same time by clicking the button again.</p>
+      <p style="color:white;text-align: center; font-family: Verdana;""><input id="IdInput" required></input></p>
+      <p style="color:white;text-align: center; font-family: Verdana;""><button id="twitchbutton" onclick="videoplayer()">Generate Twitch Stream</button></p>
+      <p style="color:white;text-align: center; font-family: Verdana;""><input type="button" id="resetbutton" value="Click to Reset Streams" onClick="document.location.reload(true)"></input></p>
+      <p style="color:white;text-align: center;">You can also click below to find a random popular streamer on Twitch.TV
+      <p style="color:white;text-align: center; font-family: Verdana;""><button id="twitchbutton" onclick="randomvideoplayer()">Discover</button></p>
+      <div align="center" id="{PLAYER_DIV_ID}"></div>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      <div class="botbar">
+         <br>
+         <strong><span style="text-align: center; color: black; font-size: 20px; font-family: Verdana;">GamePlay<sup>©</sup> 2019</span></strong>
+         <br/>
+		 <br/>
+		 <span style="text-align: center; color: black; font-size: 16px; font-family: Verdana;"> All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+		 <br/>
+		 <br/>
+         <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+         <a href="https://twitter.com/" class="fa fa-twitter"></a>
+         <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+      </div>
+   </body>
+</html>

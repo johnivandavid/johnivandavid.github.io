@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>GamePlay - Home</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+   </head>
+   <body style="background-color:#171a21;">
+      <div class="topnav" style="display:flex;justify-content:center;align-items:center;">
+         <div class="logo"><a href="index.html"><img src="Updated_logo.png" alt="GamePlay_Logo" height="75" width="196"></a></div>
+         <a href="News.html">Gaming News</a>
+         <a href="Live.html">GamePlay Live</a>
+         <a href="GamePurchases.html">Esports and Purchasing</a>
+         <a href="Contact.html">Contact Us</a>
+      </div>
+      <div class="main2">
+         <p>
+		 <strong><h1 style="margin-top: 125px;color:white;text-align: center; font-size: 30px;">Welcome to GamePlay!</h1></strong>
+		 <p style="color:white;text-align: center; font-size: 20px;">The central hub for the latest gaming news, featuring your favorite live<br>Twitch<sup>©</sup> streams, and a dedicated marketplace to discover and buy new games!</p> 
+		 <br/>
+		 <br/>
+		 <strong><p style="color:white;text-align: center; font-size: 25px;"><u>Featured Gaming News Articles:</u></p></strong>
+         <div class="slideshow-container">
+            <div class="mySlides fade">
+               <a href="https://www.pcgamer.com/borderlands-2-review/">
+                  <div class="numbertext"></div>
+                  <img src="News_1.jpg" style="width:1000px">
+                  <div class="text">The newest version of Borderlands is set to release later this year! Make sure to catch up on what you missed in the previous games!</div>
+               </a>
+            </div>
+            <div class="mySlides fade">
+               <a href="https://www.crashbandicoot.com/crashteamracing">
+                  <div class="numbertext"></div>
+                  <img src="News_2.jpg" style="width:1000px">
+                  <div class="text">Crash Team Racing is making a comeback with new additions to the long lasting series. Fans of the older generation games will not want to miss this HD remaster! Along with remastering it, mario cart racing style gameplay will be a big part of the experience!</div>
+               </a>
+            </div>
+            <div class="mySlides fade">
+               <a href="https://www.nintendo.com/games/detail/super-mario-maker-2-switch/">
+                  <div class="numbertext"></div>
+                  <img src="News_3.jpg" style="width:1000px; height: 560px;">
+                  <div class="text">Super Mario Maker 2 is finally here! After a successful launch of the original Super Mario Maker, fans of the series will finally get to enjoy fresh content for a game they know and love. Make sure you get your pre orders in, Super Mario Maker 2 is scheduled to release June 28th, 2019 for the Nintendo Switch.</div>
+               </a>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+         </div>
+         <br>
+         <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+         </div>
+         </p>
+         <br/>
+		 
+		 <strong><p style="color:white;text-align: center; font-size: 25px;"><u>Featured Twitch Live Stream:</u></p></strong>
+
+         <div id="twitch-embed" align="center"></div>
+         <br/>
+         <br/>
+         <div class="botbar">
+            <br>
+			<strong><span style="text-align: center; color: black; font-size: 20px; font-family: Verdana;">GamePlay<sup>©</sup> 2019</span></strong>
+			 <br/>
+			 <br/>
+			 <span style="text-align: center; color: black; font-size: 16px; font-family: Verdana;"> All rights reserved. All trademarks are property of their respective owners in the US and other countries.
+			 <br/>
+			 <br/>
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+         </div>
+         <p align="center">
+            <script type="text/javascript">
+               new Twitch.Embed("twitch-embed", {
+                 width: 800,
+                 height: 600,
+                 channel: "ninja"
+               });
+            </script>
+         </p>
+      </div>
+      <script>
+         var slideIndex = 0;
+         carousel();
+         
+         function carousel() {
+           var i;
+           var x = document.getElementsByClassName("mySlides");
+           for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none"; 
+           }
+           slideIndex++;
+           if (slideIndex > x.length) {slideIndex = 1} 
+           x[slideIndex-1].style.display = "block"; 
+           setTimeout(carousel, 10000);
+         }
+         
+         var slideIndex = 1;
+         showSlides(slideIndex);
+         
+         // Next/previous controls
+         function plusSlides(n) {
+           showSlides(slideIndex += n);
+         }
+         
+         // Thumbnail image controls
+         function currentSlide(n) {
+           showSlides(slideIndex = n);
+         }
+         
+         function showSlides(n) {
+           var i;
+           var slides = document.getElementsByClassName("mySlides");
+           var dots = document.getElementsByClassName("dot");
+           if (n > slides.length) {slideIndex = 1} 
+           if (n < 1) {slideIndex = slides.length}
+           for (i = 0; i < slides.length; i++) {
+               slides[i].style.display = "none"; 
+           }
+           for (i = 0; i < dots.length; i++) {
+               dots[i].className = dots[i].className.replace(" active", "");
+           }
+           slides[slideIndex-1].style.display = "block"; 
+           dots[slideIndex-1].className += " active";
+         }
+            
+      </script>
+   </body>
+</html>

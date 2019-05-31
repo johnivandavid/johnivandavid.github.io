@@ -1,0 +1,330 @@
+body {
+  background-color: #171a21;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #66c0f4;
+  overflow: hidden;
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+  height: 70px;
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  margin: 14px 16px;
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-family: Verdana;
+  font-weight:bold;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #c7d5e0;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #2a475e;
+  color: white;
+}
+
+.botbar {
+  background-color: #505050;
+  bottom: 0; 
+  width: 100%; 
+  height: 170px;
+  align-content: center;
+  text-align: center;
+}
+
+.column1 {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.column2
+{
+  color:white;
+  padding-right: 200px;
+}
+
+.column2center
+{
+  text-align: center;
+}
+
+.popup {
+  zoom:1.0;
+  position:relative;
+  text-decoration:none;
+}
+.popup span {
+  position:fixed;
+  top:170px;
+  left:500px;
+  width:350px;
+  padding:10px;
+  border:10px solid #000;
+  border-radius:10px;
+  left:-999em;
+  z-index:990;
+}
+
+.popup:hover {visibility:visible}
+.popup:hover span {left:350px;}
+.popup span {position:absolute;}
+
+
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  align-content: center;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  align-content: center;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.uitooltip {
+	padding: 8px;
+  background:yellow;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	-webkit-box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px #aaa;
+}
+
+
+.logo {  
+  margin-right: auto;
+}
+
+.main {
+  margin-top: 50px;
+  height: 350px;
+  width: 100%;
+}
+
+.main2 {
+  margin-top: 50px;
+  height: 0px;
+  width: 100%;
+}
+
+.container {
+  margin-top: 50px;
+  height: 1500px;
+  color: white;
+  font-size: 17px;
+  font-family: Verdana;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+}
+
+.steam {
+  text-align: center;
+}
+
+.game_mid {
+  text-align: center;
+  width: 100%;
+}
+
+#lol {
+  
+  color: white;
+  font-size: 17px;
+  font-family: Verdana;
+	 margin-left: 100px;
+  margin-right: 100px;
+    text-align: center;
+
+}
+
+#dota {
+  
+  color: white;
+  font-size: 17px;
+  font-family: Verdana;
+	 margin-left: 100px;
+  margin-right: 100px;
+    text-align: center;
+
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  z-index: -900;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+#twitchbutton
+{
+  background-color: #66c0f4;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  width: 300px;
+  cursor: auto;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+#resetbutton
+{
+  background-color: #66c0f4;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 8px;
+  width: 300px;
+  cursor: auto;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+#IdInput
+{
+  width: 300px;
+  background-color: lightgrey;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
